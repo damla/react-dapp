@@ -2,6 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   // We get the contract to deploy
+  // ABI
   const Greeter = await hre.ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy("Hello, Hardhat!");
 
