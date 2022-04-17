@@ -4,6 +4,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 
 contract Greeter {
+    // private => exposed only in the smart contract
     string private greeting;
 
     constructor(string memory _greeting) {
@@ -11,6 +12,7 @@ contract Greeter {
         greeting = _greeting;
     }
 
+    // returning greeting declared
     function greet() public view returns (string memory) {
         return greeting;
     }
